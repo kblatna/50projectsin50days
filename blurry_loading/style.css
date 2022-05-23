@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background-image: url("https://images.unsplash.com/photo-1576060958229-4be1da85bc3a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    
+    /*
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+
+    Pokud zvýšíme číslo u blur filteru např. na 70px, vytvoří se nám po okrajích nevzhledné zakulcené rohy. 
+    Abychom se jich zbavili, potřebujeme napozicovat vršek a levý okraj na mínus 30px. Napravo a dole vyřešíme calc funkcí, kde připočteme 60px;
+    */
+
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px); /*https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_filter*/
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+}
