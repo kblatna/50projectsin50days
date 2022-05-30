@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #BCD4DE;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: #466365;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 15vh;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%); /*0 is default, if we set 100px, it moves from left to right by 100px. 400% move boxes away from the screen*/
+    transition: transform .4s ease; /*it makes transform smoothly*/
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0); /*default value, it appears on default position in the middle*/
+}
+
+
+
