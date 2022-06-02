@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+  --primary-color: #1f618d;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: lightblue;
+  background-color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   margin: 0;
   display: flex;
@@ -30,6 +34,8 @@ body {
 h3 {
   margin: 0;
   letter-spacing: 2px;
+  font-size: 22px;
+  color: var(--primary-color);
 }
 
 .quote {
@@ -38,21 +44,31 @@ h3 {
   line-height: 25px;
   margin: 40px auto 20px auto;
   max-width: 400px;
+  font-style: italic;
 }
 
 .author {
   margin: 0 auto 40px auto;
-  font-style: italic;
+  opacity: 0.7;
+  font-size: 14px;
 }
 
 .btn {
-  background-color: lightblue;
-  border: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: #1f618d;
 }
 
 .btn:active {
