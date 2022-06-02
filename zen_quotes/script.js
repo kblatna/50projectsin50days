@@ -16,12 +16,17 @@ function getQuotes() {
   fetch(url, config)
     .then((response) => response.json())
     .then((items) => {
-      //console.log(data)
+      let item = items[Math.floor(Math.random() * items.length)] // random select of quote
 
-      let item = items[Math.floor(Math.random() * items.length)]
-      console.log(item)
-
-      quoteEl.innerHTML = item.text
-      quoteAuthor.innerHTML = item.author
+      quoteEl.innerHTML = `„${item.text}“` // add quote to DOM
+      if (item.author !== null) {
+        quoteAuthor.innerHTML = item.author
+      } else {
+        quoteAuthor.innerText = 'Author unknown'
+      }
     })
 }
+
+quoteBtn.addEventListener('click', () => {
+  getQuotes()
+})
