@@ -38,6 +38,20 @@ img {
   object-fit: cover;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    transition: color .4s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
 @media (min-width: 800px) {
   #buttons {
     justify-content: center;
