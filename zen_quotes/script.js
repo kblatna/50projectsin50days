@@ -6,7 +6,29 @@ let url = 'https://type.fit/api/quotes'
 
 getQuotes()
 
-function getQuotes() {
+// USING Async/Await
+async function getQuotes() {
+  const config = {
+    headers: {
+      Accept: 'application/json',
+    },
+  }
+
+  const res = await fetch(url, config)
+  const items = await res.json()
+
+  let item = items[Math.floor(Math.random() * items.length)] // random select of quote
+
+  quoteEl.innerHTML = `„${item.text}“` // add quote to DOM
+  if (item.author !== null) {
+    quoteAuthor.innerHTML = item.author
+  } else {
+    quoteAuthor.innerText = 'Author unknown'
+  }
+}
+
+// USING .then()
+/*function getQuotes() {
   const config = {
     headers: {
       Accept: 'application/json',
@@ -25,7 +47,7 @@ function getQuotes() {
         quoteAuthor.innerText = 'Author unknown'
       }
     })
-}
+}*/
 
 quoteBtn.addEventListener('click', () => {
   getQuotes()
