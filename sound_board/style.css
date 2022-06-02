@@ -39,17 +39,17 @@ img {
 }
 
 a {
-    text-decoration: none;
-    color: #000;
-    transition: color .4s ease;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.4s ease;
 }
 
 a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 p {
-    color: #fff;
+  color: #fff;
 }
 
 @media (min-width: 800px) {

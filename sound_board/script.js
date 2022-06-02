@@ -30,21 +30,20 @@ frogs.forEach((frog) => {
   btn.classList.add('btn') // add class for this button
   btn.innerHTML = frog.name //add name of frog from frogs array to button text
 
-
   const img = document.createElement('img') // add img element
   btn.appendChild(img) // add img to btn
   img.src = frog.url //add url to img source
 
-
   let frogSound = document.getElementById(frog.name) // find the specific frog
-  let isPlaying = false // default state 
+  let isPlaying = false // default state
 
-  function togglePlay() { // toggle between states
+  function togglePlay() {
+    // toggle between states
     isPlaying ? frogSound.pause() : frogSound.play()
   }
 
-
-  frogSound.onplaying = () => { //change the state
+  frogSound.onplaying = () => {
+    //change the state
     isPlaying = true
   }
   frogSound.onpause = () => {
