@@ -8,7 +8,6 @@ const secondEl = document.querySelector('.second')
 const timeEl = document.querySelector('.time')
 const dateEl = document.querySelector('.date')
 const dateNumEl = document.querySelector('.date-circle')
-console.log(dateNumEl)
 
 const days = [
   'Monday',
