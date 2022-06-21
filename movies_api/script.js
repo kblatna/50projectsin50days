@@ -1,6 +1,6 @@
 const API_KEY = '7713bb2f56de7e4bdcaac26b537f1464&page=1'
 const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=10`
-const IMG_URL = 'https://image.tmdb.org/t/p/w1280' //https://developers.themoviedb.org/3/getting-started/images
+const IMG_URL = 'https://image.tmdb.org/t/p/w1280' //Documentation -> https://developers.themoviedb.org/3/getting-started/images
 const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query="`
 
 const form = document.getElementById('form')
@@ -22,19 +22,12 @@ function showMovies(movies) {
   main.innerHTML = ''
 
   movies.forEach((movie) => {
-    const { title, poster_path, vote_average, overview } = movie
+    const { title, poster_path, vote_average, overview } = movie // ve složených závorkách si vytáhneme jen ty informace, které potřebujeme
 
     const movieEl = document.createElement('div')
     movieEl.classList.add('movie')
 
-    poster_path === null
-
-    if(poster_path === null) {
-        poster_path = "test"
-    }
-
-    movieEl.innerHTML = 
-       `<img
+    movieEl.innerHTML = `<img
           src="${IMG_URL + poster_path}"
           alt="${title}"
         />
@@ -47,8 +40,7 @@ function showMovies(movies) {
           ${overview}
         </div>`
 
-      main.appendChild(movieEl)
-       
+    main.appendChild(movieEl)
   })
 }
 
