@@ -47,6 +47,6 @@ function updateBigCup() {
     remained.style.height = 0
   } else {
     remained.style.visibility = 'visible'
-    liters.innerText = `${(250 * fullCups) / 1000}L` // 2 litres minus the drunk cups. 250 (ml) is one cup, we have to dived by thousand to get the litres.
+    liters.innerText = `${2 - (250 * fullCups) / 1000}L` // 2 litres minus the drunk cups. 250 (ml) is one cup, we have to dived by thousand to get the litres.
   }
 }
