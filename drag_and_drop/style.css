@@ -8,8 +8,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /*viewport height take up the entire height of the browser, the viewport*/
-  overflow: hidden; /*hidden scrollbars*/
+  height: 100vh;
+  overflow: hidden;
 }
 
 .empty {
@@ -21,7 +21,7 @@ body {
 }
 
 .fill {
-  background-image: url('https://source.unsplash.com/random/150x150');
+  background-image: url('https://source.unsplash.com/random/150x150'); /*load random picture every time*/
   height: 145px;
   width: 145px;
   cursor: pointer;
